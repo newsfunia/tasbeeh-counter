@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free One Page Website - Tasbeeh Counter, Donate Button, and SEO optimized content for UK & US audience.">
+  <meta name="description" content="Responsive one page website with Tasbeeh Counter, PayPal Donate Button, and professional SEO content for global audience.">
   <title>My One Page Website</title>
   <style>
     body {
@@ -39,6 +39,48 @@
       background: #222;
       font-size: 14px;
     }
+    /* Counter Styling */
+    .counter-display {
+      font-size: 8vw;   /* Responsive large number */
+      color: #fff;
+      margin: 20px 0;
+    }
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .top-buttons button {
+      background: #00ff88;
+      border: none;
+      padding: 10px 16px;
+      margin: 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .top-buttons button:hover { background: #00cc66; }
+    .main-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .main-buttons .up, .main-buttons .down {
+      background: #00ff88;
+      border: none;
+      width: 25vw;      /* Bigger responsive buttons */
+      height: 25vw;
+      margin: 10px;
+      border-radius: 50%;
+      font-size: 10vw;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .main-buttons .up:hover, .main-buttons .down:hover {
+      background: #00cc66;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -46,7 +88,6 @@
 
   <section>
     <h2>Tasbeeh Counter</h2>
-    <!-- Tasbeeh Counter Code -->
     <div id="tasbeeh-app">
       <div class="top-buttons">
         <button id="stepBtn" onclick="setStep(step)">+1</button>
@@ -55,18 +96,17 @@
       </div>
       <div class="counter-display" id="count">0</div>
       <div class="main-buttons">
-        <button class="btn" onclick="increment()">▲</button>
-        <button class="btn" onclick="decrement()">▼</button>
+        <button class="up" onclick="increment()">▲</button>
+        <button class="down" onclick="decrement()">▼</button>
       </div>
     </div>
   </section>
 
   <section>
     <h2>Support My Work</h2>
-    <!-- PayPal Donate Button -->
     <form action="https://paypal.me/MOHDSUHAIL?locale.x=en_GB&country.x=IN
 " method="post" target="_blank">
-      <input type="hidden" name="business" value="https://paypal.me/MOHDSUHAIL/" />
+      <input type="hidden" name="business" value="your-paypal-email@example.com" />
       <input type="hidden" name="currency_code" value="USD" />
       <input type="hidden" name="item_name" value="Support My Work" />
       <input type="submit" value="Donate with PayPal" class="btn" />
@@ -74,15 +114,25 @@
   </section>
 
   <section>
-    <h2>About</h2>
+    <h2>About Me</h2>
     <p>
-      This free one page website includes a digital Tasbeeh counter, a PayPal donate button, and SEO optimized content. 
-      It is designed to work smoothly on mobile, tablet, and desktop. Perfect for users in the UK, US, and worldwide.
+      I am a dedicated web creator and digital tool developer, focused on building simple, 
+      secure, and responsive online solutions. My work includes designing user‑friendly 
+      counters, donation systems, and one‑page websites that adapt perfectly to every 
+      device and screen size. With a passion for accessibility and modern design, I make 
+      sure that users in the UK, US, and worldwide can enjoy smooth experiences without 
+      technical barriers.
+    </p>
+    <p>
+      Professionally, I specialize in creating SEO‑optimized content and responsive 
+      interfaces. This ensures that every project not only looks great but also ranks 
+      well in search engines. My goal is to combine functionality with visibility, 
+      helping digital tools reach the right audience globally.
     </p>
   </section>
 
   <footer>
-    © 2026 My One Page Website | Built Free with Blogger / GitHub Pages
+    © 2026 My One Page Website | Built Free with GitHub Pages
   </footer>
 
 <script>
