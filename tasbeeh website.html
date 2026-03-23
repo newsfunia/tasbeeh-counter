@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free One Page Website - Tasbeeh Counter, Donate Button, and SEO optimized content for UK & US audience.">
+  <title>My One Page Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      background: #00ff88;
+      color: #111;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .btn {
+      background: #00ff88;
+      color: #111;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #00cc66; }
+    footer {
+      padding: 20px;
+      background: #222;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>My One Page Website</header>
+
+  <section>
+    <h2>Tasbeeh Counter</h2>
+    <!-- Tasbeeh Counter Code -->
+    <div id="tasbeeh-app">
+      <div class="top-buttons">
+        <button id="stepBtn" onclick="setStep(step)">+1</button>
+        <button onclick="editStep()">Edit</button>
+        <button onclick="reset()">Reset</button>
+      </div>
+      <div class="counter-display" id="count">0</div>
+      <div class="main-buttons">
+        <button class="btn" onclick="increment()">▲</button>
+        <button class="btn" onclick="decrement()">▼</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Support My Work</h2>
+    <!-- PayPal Donate Button -->
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="business" value="your-paypal-email@example.com" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <input type="hidden" name="item_name" value="Support My Work" />
+      <input type="submit" value="Donate with PayPal" class="btn" />
+    </form>
+  </section>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      This free one page website includes a digital Tasbeeh counter, a PayPal donate button, and SEO optimized content. 
+      It is designed to work smoothly on mobile, tablet, and desktop. Perfect for users in the UK, US, and worldwide.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 My One Page Website | Built Free with Blogger / GitHub Pages
+  </footer>
+
+<script>
+let count = 0;
+let step = 1;
+function increment() {
+  count += step;
+  document.getElementById("count").innerText = count;
+}
+function decrement() {
+  count -= step;
+  if(count < 0) count = 0;
+  document.getElementById("count").innerText = count;
+}
+function reset() {
+  count = 0;
+  document.getElementById("count").innerText = count;
+}
+function setStep(val) {
+  step = val;
+  document.getElementById("stepBtn").innerText = "+" + step;
+}
+function editStep() {
+  let newStep = prompt("Enter step value (+2, +3, etc.):", step);
+  if(newStep && !isNaN(newStep)) {
+    step = parseInt(newStep);
+    document.getElementById("stepBtn").innerText = "+" + step;
+  }
+}
+</script>
+</body>
+</html>
